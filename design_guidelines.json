@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "persona": "E1",
+    "philosophy": "Fusion over Imitation. Emotion First. Content is King.",
+    "anti_patterns": [
+      "Purple/Teal CTAs",
+      "Inter font everywhere",
+      "Centered everything",
+      "Gradient overload"
+    ]
+  },
+  "typography": {
+    "english": {
+      "headings": {
+        "family": "Playfair Display, serif",
+        "weights": ["600", "700"],
+        "usage": "Hero titles, Section headers, Hall names"
+      },
+      "body": {
+        "family": "Lato, sans-serif",
+        "weights": ["400", "500"],
+        "usage": "Paragraphs, UI elements, Buttons"
+      }
+    },
+    "marathi": {
+      "family": "Noto Sans Devanagari, sans-serif",
+      "weights": ["400", "700"],
+      "usage": "All Marathi text content"
+    },
+    "installation": "Import via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@600;700&display=swap');"
+  },
+  "colors": {
+    "primary": {
+      "maroon": "#800000",
+      "gold": "#D4AF37",
+      "cream": "#FDFBF7"
+    },
+    "neutral": {
+      "charcoal": "#1A1A1A",
+      "grey_100": "#F3F4F6",
+      "grey_200": "#E5E7EB",
+      "white": "#FFFFFF"
+    },
+    "semantic": {
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B",
+      "info": "#3B82F6"
+    },
+    "usage_rules": {
+      "background": "bg-[#FDFBF7] (Cream) for main pages, bg-white for cards",
+      "text_primary": "text-[#1A1A1A]",
+      "text_secondary": "text-[#800000] (Maroon) for headings/accents",
+      "cta_primary": "bg-[#800000] text-white hover:bg-[#600000]",
+      "cta_secondary": "border-2 border-[#D4AF37] text-[#800000] hover:bg-[#D4AF37] hover:text-white"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "shadow-[0_4px_20px_-2px_rgba(0,0,0,0.1)]",
+    "borders": "border border-[#D4AF37]/20",
+    "radius": "rounded-xl",
+    "textures": "Subtle grain overlay on hero sections"
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "structure": "Split Hero or Carousel",
+      "components": [
+        "HeroSection (Om vs Shiv selection)",
+        "FeatureGrid (Capacity, Price, Location)",
+        "TestimonialMarquee"
+      ]
+    },
+    "admin_dashboard": {
+      "structure": "Sidebar Navigation + Top Bar",
+      "grid": "Bento Grid Mode B (High Density)",
+      "components": [
+        "StatsCards",
+        "BookingCalendar",
+        "BillGeneratorForm"
+      ]
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-full px-8 py-3 font-serif tracking-wide transition-transform hover:scale-105",
+      "secondary": "rounded-full px-8 py-3 border-2 font-sans tracking-wide"
+    },
+    "cards": {
+      "hall_card": "bg-white p-0 overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group",
+      "service_card": "bg-[#FDFBF7] p-6 border border-[#D4AF37]/10 rounded-xl hover:border-[#D4AF37]/40"
+    },
+    "inputs": {
+      "style": "bg-white border-gray-200 focus:border-[#800000] focus:ring-[#800000]/20 rounded-lg"
+    }
+  },
+  "image_urls": {
+    "om_lawns": {
+      "url": "https://images.pexels.com/photos/33914530/pexels-photo-33914530.jpeg",
+      "alt": "Om Lawns Banquet Hall - Grand Interior",
+      "category": "halls"
+    },
+    "shiv_lawns": {
+      "url": "https://images.pexels.com/photos/4717558/pexels-photo-4717558.jpeg",
+      "alt": "Shiv Lawns Banquet Hall - Elegant Setup",
+      "category": "halls"
+    },
+    "rituals": {
+      "url": "https://images.pexels.com/photos/18107914/pexels-photo-18107914.jpeg",
+      "alt": "Traditional Maharashtrian Wedding Rituals",
+      "category": "culture"
+    },
+    "decoration": {
+      "url": "https://images.pexels.com/photos/29494642/pexels-photo-29494642.jpeg",
+      "alt": "Wedding Decoration Details",
+      "category": "services"
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Do not use generic centered layouts.",
+      "Use 2-3x more spacing than typical designs (p-8, p-12).",
+      "Every interaction needs micro-animations.",
+      "Use 'sonner' for toasts.",
+      "Use 'lucide-react' for icons."
+    ],
+    "accessibility": [
+      "Ensure text contrast ratio of 4.5:1.",
+      "Add data-testid to all interactive elements."
+    ],
+    "file_structure": {
+      "components": "Use .jsx for components in /src/components/ui",
+      "pages": "Use .js or .jsx for pages in /src/pages",
+      "styles": "Use Tailwind classes primarily, avoid custom CSS files unless necessary."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Implement the Landing Page first with the Split Hero concept.",
+    "Create a 'Layout' component that handles the Navbar and Footer.",
+    "Use the provided image URLs for the respective sections.",
+    "Ensure the Admin Dashboard is distinct from the User Landing page (different layout wrapper).",
+    "Implement the Bilingual toggle (English/Marathi) using a React Context or simple state at the top level."
+  ]
+}
